@@ -12,6 +12,23 @@ const MockFollowersList = () => {
 
 describe("FollowersList", () => {
 
+    beforeEach(() => {
+        console.log(">>>RUNNING BEFORE EACH TEST")
+    })
+
+    beforeAll(() => {
+        console.log(">>>RUNNING BEFORE ALL TESTS")
+    })
+
+    afterEach(() => {
+        console.log(">>>RUNNING AFTER EACH TEST")
+    })
+
+    afterAll(() => {
+        console.log(">>>RUNNING AFTER ALL TESTS")
+    })
+    
+
     test("Renders FollowersList component", async () => {
             render(<MockFollowersList />);
         const followerDivElement = await screen.findByTestId("followerlist-container");
